@@ -42,7 +42,7 @@ class ApplicationController < Sinatra::Base
     end 
 
     patch '/articles/:id' do 
-      binding.pry
+      # binding.pry
       edited_data={}
       edited_data[:title] = params[:title]
       edited_data[:content] = params[:content]
@@ -51,12 +51,12 @@ class ApplicationController < Sinatra::Base
       redirect "/articles/#{article.id}"
     end 
    
-    delete '/articles/:id/delete' do 
+    delete '/articles/:id' do 
       
       @article = Article.find_by(id: params[:id])
       @article.destroy
 
-      erb :delete
+      
     end 
 
 
