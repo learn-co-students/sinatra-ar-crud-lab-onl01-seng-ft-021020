@@ -42,6 +42,7 @@ class ApplicationController < Sinatra::Base
     end 
 
     patch '/articles/:id' do 
+      binding.pry
       edited_data={}
       edited_data[:title] = params[:title]
       edited_data[:content] = params[:content]
