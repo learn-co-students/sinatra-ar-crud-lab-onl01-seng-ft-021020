@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <body>
+ <% if @articles.any? %>
+   <% @articles.each do |x|%>
+   <%= x.title%>
+   <%=x.content%>
+<% end %> 
+<% end %>
+  </body>
+</html>
