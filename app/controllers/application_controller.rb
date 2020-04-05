@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
 
   post '/articles' do
     Article.create(params)
-    erb :articles
+    redirect '/articles'
   end
 
   get '/articles' do
