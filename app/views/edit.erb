@@ -1,11 +1,11 @@
 
-    <form action="/article/<%=@article.id%>" method="POST">
-      <input id="hidden" type="hidden" name="method" value="patch"/>
-      <label for "name">Name:</label>
-      <input type="text" id="title" name="title" value="<%= @article.title %>"/>
+    <form action="/articles/<%=@article.id%>" method="POST">
+      <input id="hidden" type="hidden" name="_method" value="patch"/>
+      <label for = "title">Title:</label>
+      <input type="text" id="title" name="article[title]" value="<%= @article.title %>"/>
       <br />
-      <label for "content">Content:</label>
-      <input type="text" id="content" name="content" value="<%= @post.content %>"/>
+      <label for = "content">Content:</label>
+      <textarea type="text" id="content" name="article[content]" value="<%= @article.content %>"> </textarea>
       <br />
       <input type="submit" value="submit" id="submit"/>
     </form>
