@@ -1,0 +1,7 @@
+    <h1>Articles</h1>
+ <% if @articles.any? %>
+   <% @articles.each do |x|%>
+   <%= x.title%>
+   <%=x.content%>
+<% end %> 
+<% end %>
