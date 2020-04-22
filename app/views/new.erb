@@ -1,4 +1,9 @@
 <form action="/articles" method="POST">
-  <input type="text" name="name" id="name">
-  <input type="submit" value="submit">
+  <label for="article_title">Article Title: </label>
+  <br>
+  <input type="text" name="title" id="article_title">
+  <label for="article_content">Enter the article's content: </label>
+  <br>
+  <textarea id="article_content" name="content"></textarea>
+  <input type="submit" value="submit" id="submit">
 </form>
